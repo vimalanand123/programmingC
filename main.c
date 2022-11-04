@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 73937b191df433d0c880c40eaf5203e065d41e04
 #define MAX_STUDENTS    10
 
 typedef unsigned short int unint8;
@@ -45,5 +48,9 @@ int main()
         //printf("name is %d\n",students->ptr2marks[lop_var]->eng);
         printf("name is %d\n",students[lop_var].exammarks.eng);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 73937b191df433d0c880c40eaf5203e065d41e04
     return 0;
 }
