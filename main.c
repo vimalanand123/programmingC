@@ -25,7 +25,7 @@ pinfo students[MAX_STUDENTS];
 int main()
 {
 
-    printf("Hello world!\n");
+    printf("Hello world!begger\n");
 
     for(unint8 lop_var=0;lop_var<MAX_STUDENTS;lop_var++)
     {
