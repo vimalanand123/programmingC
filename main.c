@@ -25,9 +25,7 @@ pinfo students[MAX_STUDENTS], *ptr2studnt;
 int main()
 {
 
-    ptr2studnt  =   &students[0];
-
-    printf("Hello world!stupid\n");
+   printf("Hello world!stupid\n");
 
     for(unint8 lop_var=0;lop_var<MAX_STUDENTS;lop_var++,ptr2studnt++)
     {
