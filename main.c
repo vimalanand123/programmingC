@@ -20,29 +20,37 @@ marks exammarks;
 marks *ptr2marks;
 }pinfo;
 
-pinfo students[MAX_STUDENTS];
+pinfo students[MAX_STUDENTS], *ptr2studnt;
 
 int main()
 {
 
+    ptr2studnt  =   &students[0];
+
     printf("Hello world!stupid\n");
 
-    for(unint8 lop_var=0;lop_var<MAX_STUDENTS;lop_var++)
+    for(unint8 lop_var=0;lop_var<MAX_STUDENTS;lop_var++,ptr2studnt++)
     {
-        students[lop_var].name =   "hi";
-        students[lop_var].age   =   lop_var;
-        students[lop_var].height   =   6+lop_var;
-        students[lop_var].exammarks.eng    =   50+lop_var;
-        students[lop_var].exammarks.hin    =   60+lop_var;
-        students[lop_var].exammarks.tel    =   70+lop_var;
+        ptr2studnt->name =   "hi";
+        (ptr2studnt->age)   =   lop_var;
+    (ptr2studnt->height)   =   6+lop_var;
+    (ptr2studnt->exammarks.eng)    =   50+lop_var;
+    (ptr2studnt->exammarks.hin)    =   60+lop_var;
+    ptr2studnt->exammarks.tel   =   70+lop_var;
 
     }
+
+    ptr2studnt  =   &students[0];
+
     for(unint8 lop_var=0;lop_var<MAX_STUDENTS;lop_var++)
     {
-        //printf("name is %d\n",students.ptr2marks[lop_var].eng);
+        //printf("u is %d\n",students[0]->ptr2marks[lop_var].eng); //run time fault
+        //printf("u is %d\n",students[0].ptr2marks[lop_var]->eng); compile time error
+        //printf("u is %d\n",students[lop_var].ptr2marks->eng);run time error
+        //printf("u is %d\n",students[lop_var].ptr2marks->eng);
         //printf("name is %d\n",students->ptr2marks[lop_var].eng);
-        //printf("name is %d\n",students->ptr2marks[lop_var]->eng);
-        printf("name is %d\n",students[lop_var].exammarks.eng);
+        printf("name is %d\n",ptr2studnt->exammarks.eng);
+        //printf("name is %d\n",(students[lop_var]->exammarks.eng));
     }
 
     return 0;
